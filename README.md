@@ -32,7 +32,7 @@ Zdjęcia uzyskane powyższymi krokami i po ręcznym czyszczeniu są umieszczone 
 
 Następnie algorytmem HoG dokonano ekstrakcji cech, których użyto do wytrenowania modelu SVM, dostępnego w bibliotece scikit-learn. Obrazy trenujące zostały podzielone na zbiory trenujący (0.8 obrazów), na których został wytrenowany model, oraz testujące (0.2 obrazów) w celu weryfikacji działania modelu. Dodatkowo utworzono klasę 'B', która przedstawia białą kartkę (czystą lub w kratkę) a także krawędzie połączeń - generalnie to, co nie jest żadnym z komponentów elektronicznych.
 
-Trening modelu SVM odbywał się na pojedynczych obrazkach komponentów (wyciętych z całej kartki), przeskalowanych z \(128 \times 128\) do \(64 \times 64\). 
+Trening modelu SVM odbywał się na pojedynczych obrazkach komponentów (wyciętych z całej kartki), przeskalowanych z 128 x 128 do 64 x 64. 
 
 
 ![alt text](svm_train.png)
@@ -41,7 +41,7 @@ Trening modelu SVM odbywał się na pojedynczych obrazkach komponentów (wycięt
 Na powyższym zdjęciu, dobrze widać, że wytrenowany model SVM nie ma bardzo wysokiej skuteczności, bo ok. 68\%.
 
 
-Następnie powtórzono trening, przy którym zmieniono nieco parametry aby dostać dobre jakościowo zdjęcia już od razu w rozmiarze \(64 \times 64\), a także utworzono "podwójny" zbiór treningowy z nieco różniących się zdjęć uzyskanych innymi parametrami preprocessingu. Przed treningiem, ręcznie czyszczono zbiór trenujący z bardzo zdeformowanych obrazków, tak samo jak przy treningu poprzedniego modelu. Tym razem skuteczność znacznie się podwyższyła wraz ze wzrostem ilości i jakości danych - uzyskana skuteczność na zbiorze testowym ok. 86\%.
+Następnie powtórzono trening, przy którym zmieniono nieco parametry aby dostać dobre jakościowo zdjęcia już od razu w rozmiarze 64 x 64, a także utworzono "podwójny" zbiór treningowy z nieco różniących się zdjęć uzyskanych innymi parametrami preprocessingu. Przed treningiem, ręcznie czyszczono zbiór trenujący z bardzo zdeformowanych obrazków, tak samo jak przy treningu poprzedniego modelu. Tym razem skuteczność znacznie się podwyższyła wraz ze wzrostem ilości i jakości danych - uzyskana skuteczność na zbiorze testowym ok. 86\%.
 
 Przykładowe działanie:
 ![alt text](example_result.jpg)
